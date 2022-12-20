@@ -1,7 +1,8 @@
-import mongoose from "mongoose";
+
+const mongoose = require("mongoose")
 
 const propertySchema = new mongoose.Schema(
-  { propertyName: String, area: Number },
+  { ownerName: String, totalArea: Number, availableArea: Number, usedArea : Number },
   { timestamps: true }
 );
 

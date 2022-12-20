@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-// const urlController = require("../controllers/urlController");
+const {createProperty} = require("../controllers/property");
 
 //============================post api for shorten url===================>>>
 router.post("/crop",function check(){
@@ -8,7 +8,6 @@ router.post("/crop",function check(){
     // res.send({'app is working'})
 });
 
-//============================get api for redirect url===================>>>
-// router.get("/:urlCode", urlController.getUrl);
+router.post("/property", createProperty)
 
 module.exports = router;
